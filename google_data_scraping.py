@@ -45,7 +45,6 @@ while next_page_token_text in data.keys(): #check if there is a next page token
   count += 1 # continue to next data file
   # print(response.text)
   # print("Number of results {}".format(len(data["results"])))
-
   if count == stop_count and testing: # early breaking for testing
     break
 

@@ -2,4 +2,6 @@
 
 # Web Scraping
 1. Pip install selenium and webdriver_manager
-2. Update the start_url to the desired city and run yelp_scraper.py
+2. Run yelp_scraper.py
+
+The raw data from web scraping is compiled in totalRawData.json

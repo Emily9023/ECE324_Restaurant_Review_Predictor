@@ -7,17 +7,18 @@ from selenium.webdriver.support import expected_conditions as EC
 import json
 
 # set up initial google search to the yelp site
+# replace with your local path to the chromedriver executable
 s = Service('C:\\Users\\anika\\Documents\\ECE324_Restaurant_Review_Predictor\\chromedriver.exe')
 wd = webdriver.Chrome(service=s)
 wd.maximize_window()
 wd.implicitly_wait(50)
-start_url = 'https://www.yelp.ca/search?find_desc=Restaurants&find_loc=Toronto%2C+ON'
+start_url = 'https://www.yelp.ca/search?find_desc=Restaurants&find_loc=Markham%2C+Ontario'
 wd.get(start_url)
 wait = WebDriverWait(wd, 20)
 
 d = {}
 i = 3
-total_entries = 3
+total_entries = 50000
 while i < 20 and len(d) < total_entries:
     # each run of the while loop is one page on yelp
     rest_element = None
@@ -57,15 +58,15 @@ while i < 20 and len(d) < total_entries:
         # go to next page
         WebDriverWait(wd, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='main-content']/div/ul/li[21]/div/div[1]/div/div[11]/span/a"))).click()
         i = 3
+        js = json.dumps(d)
+        # Open new json file if not exist it will create
+        fp = open('markhamData.json', 'a')
+        # write to json file
+        fp.write(js)
+        # close the connection
+        fp.close()
+
     i += 1
 
 
 wd.quit()
-
-js = json.dumps(d)
-# Open new json file if not exist it will create
-fp = open('data.json', 'a')
-# write to json file
-fp.write(js)
-# close the connection
-fp.close()

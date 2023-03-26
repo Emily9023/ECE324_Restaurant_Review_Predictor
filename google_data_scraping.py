@@ -9,7 +9,7 @@ testing = True
 
 # code
 next_page_token_text = "next_page_token"
-api_key = "AIzaSyCnRkXos1XsHViYmnhAX0p35QOZhvb6cyo"
+api_key = ""
 query = "restaurants%20in%20toronto"
 location = "43.6532%2C79.3832"
 

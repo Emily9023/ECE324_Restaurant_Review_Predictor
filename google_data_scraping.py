@@ -54,10 +54,18 @@ for longitude in longitudes:
     count += 1
 
 
+<<<<<<< HEAD
 
 # # get next_page_token
 # data = json.loads(response.text)
 # next_page_token = data[next_page_token_text]
+=======
+  count += 1 # continue to next data file
+  # print(response.text)
+  # print("Number of results {}".format(len(data["results"])))
+  if count == stop_count and testing: # early breaking for testing
+    break
+>>>>>>> 95d5cc57ec73811d8444ce7d0b9ba721495828e7
 
 
 

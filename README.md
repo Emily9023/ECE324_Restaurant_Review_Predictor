@@ -8,7 +8,7 @@ The raw data from web scraping is compiled in totalRawData.json within the JSON_
 There is an Archive folder with documenting our previous attempt at using the Google Reviews API (and the data collected through that method). 
 # Step 2: Data Pre Processing
 In the Data Pre Processing directory, there is an ipynb notebook called Data Cleaning. The cleaned data is stored in the cleanedData.csv file.
-#Step 3: Models
+# Step 3: Models
 In the Models directory, we created 3 models (LinearLogisticRegression and 2 Boosting Models).
 
 

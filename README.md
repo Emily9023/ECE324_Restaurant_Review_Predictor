@@ -15,7 +15,7 @@ In the Models directory, at first we created 3 models (LinearLogisticRegression 
 
 Next we created two neural network models. Neural Net.ipynb contains 1 basic neural network model and 1 stacked neural network model. 
 # Step 4: Generate Coefficients Table
-CalculateCoefficients.ipynb contains the simple neural network that is used to calculate the correlation factors between cities.  
+CalculateCoefficients.ipynb (in the Models directory) contains the simple neural network that is used to calculate the correlation factors between cities.  
 
 
 
